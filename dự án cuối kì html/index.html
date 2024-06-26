@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel= "stylesheet"  href ="style.css">
+    <title>Shop Đồ Gỗ</title>
+</head>
+<body>
+
+<div class = "loichao">
+    Nội Thất Rudy kiến tạo không gian sống chất lượng
+</div>
+<nav>
+    <div class="container">
+    <ul>
+        <li><a href=""><img style="width:100px" src ="image/logo.png" alt=""></a> </li>
+        <li id="adress-form"><a href="#">Địa chỉ <i class="fa-solid fa-location-dot"></i><br> nhận hàng </a></li>
+        <li><input type = "text" id = "searchInput" placeholder ="Bạn muốn tìm gì... "><i class="fa-solid fa-magnifying-glass" onclick="searchProduct()"></i></li>
+        <li><a href=""></a><button id="giohang" onclick="mogiohang()"><i class="fa-solid fa-cart-shopping"></i>Giỏ hàng </button></li>
+        <li><a href="">Lịch sử <br> đơn hàng </a></li>
+        <li><a href=""><span class ="btn-content"><span class = "btn-top"></span></span>Mua trước trả sau </a></li>
+        <li><a href="">Hỏi đáp <br> CSKH</a></li>
+        <li id="login-form"><a href="#"><button><i class="fa-solid fa-user"></i> Đăng Nhập</button></a></li>
+
+        <div class="login">
+            <div class="form-header">
+                <h2 id="form-title">Đăng Nhập</h2>
+                <button id="login-close" class="close-btn">X</button>
+            </div>
+            <form id="auth-form">
+                <input type="text" id="username" placeholder="Username" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+            <div class="form-footer">
+                <button class="toggle-btn" id="toggle-btn">Create Account</button>
+            </div>
+        </div>
+
+        <div class="adress-form">
+            <div class="adress-form-content">
+                <h2>Chọn địa chỉ nhận hàng<span id ="adress-close">X Đóng</span></h2>
+                <form action="">
+                    <p>Chọn đầy đủ địa chỉ nhận hàng để biết chính xác thời gian giao </p>
+                    <select name ="" id ="">
+                        <option value ="#">Chọn địa điểm</option>
+                        <option value ="#">Hà Nội</option>
+                        <option value ="#">Đà Nẵng </option>
+                        <option value ="#">TP. Hồ Chí Minh</option>
+
+                    </select>
+                    <select name ="" id ="">
+                        <option value ="#">Chọn quận/ huyện</option>
+                        <option value ="#">Nam Từ Liêm</option>
+                        <option value ="#">Ba Đình</option>
+                        <option value ="#">Hoàn Kiếm</option>
+                        <option value ="#">Tây Hồ</option>
+
+                    </select>
+                    <select name ="" id ="">
+                        <option value ="#">Chọn phường/ xã </option>
+                        <option value ="#">Mễ Trì</option>
+                        <option value ="#">Phúc La</option>
+                        <option value ="#">Đại Mỗ</option>
+
+                    </select>
+                    <input type="text" placeholder="Số nhà, Tên đường">
+                    <button>Xác Nhân</button>
+                </form>
+            </div>
+        </div>   
+    </ul>
+    </div>
+</nav> 
+<section class = "menu-bar">
+    <div class="container">
+        <div class="menu-bar-content">
+            <ul>
+                <li><a href="">Sản phẩm </a></li>
+                <li><a href="">Bộ sưu tập </a>
+                    <div class="submenu">
+                        <ul>
+                            <li><a href="">Màu Óc Chó </a></li>
+                            <li><a href="">Màu Vân Gỗ</a></li>
+                            <li><a href="">Màu Trắng</a></li>
+                            <li><a href="">Màu Đen </a></li>
+
+                        </ul>
+                    </div>    
+                </li>
+                <li><a href="">Tủ</a>
+                    <div class="submenu">
+                        <ul>
+                            <li><a href="">Tủ Decord</a></li>
+                            <li><a href="">Tủ Sách</a></li>
+                            <li><a href="">Tủ Giày</a></li>
+                            <li><a href="">Phụ Quần Áo</a></li>
+                        </ul>
+                    </div>    
+                </li>
+                <li><a href="">Kệ </a>
+                    <div class="submenu">
+                        <ul>
+                            <li><a href="">Kệ gia vị</a></li>
+                            <li><a href="">Kệ bát đũa</a></li>
+                            <li><a href="">Kệ sách</a></li>
+                            <li><a href="">Kệ đa năng</a></li>
+
+                        </ul>
+                    </div>  
+                </li>
+                <li><a href="">Khuyến mãi</a></li>
+                <li><a type ="button" id ="baohanh-button" style ="cursor: pointer">Bảo hành </a></li>
+
+            </ul>
+        </div>
+    </div>
+</section>
+<!------------------------------------------Slide------------------------------------------------>
+<section class="slider">
+    <div class="container">
+        <div class="slider-content">
+            <div class="slider-content-left">
+                <div class = "slider-content-left-top-container">
+                    <div class="slider-content-left-top">
+                        <a href=""><img src="image/banlamviec.jpg" alt=""></a>
+                        <a href=""><img src="image/bantra.jpg" alt=""></a>
+                        <a href=""><img src="image/ketoong.jpg" alt=""></a>
+                        <a href=""><img src="image/ketreotuong.jpg" alt=""></a>
+                    </div>
+                    <div class="slider-content-left-top-btn">
+                        <i class="fa-solid fa-chevron-left"></i>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                </div>
+                <div class="slider-content-left-bottom">
+                    <li class = 'active'>Bàn làm việc</li>
+                    <li>Bàn Trà</li>
+                    <li>Kệ tổ ong</li>
+                    <li>Kệ treo tường</li>
+                </div>
+            </div>
+            <div class="slider-content-right">
+                <li><a href=""><img src="image/bantrangdiem.png" alt=""></a></li>
+                <li><a href=""><img src="image/kebacau.png" alt=""></a></li>
+                <li><a href=""><img src="image/tabdaugiuong.png" alt=""></a></li>
+                <li><a href=""><img src="image/kemanhinh.png" alt=""></a></li>
+            </div>
+        </div>
+    </div>
+</section>
+<!---------------------slide-product-------------->
+<section class = "baner-one">
+    <div class = "container">
+        <img src="image/sale.png" alt = "">
+    </div>
+</section>
+<section class ="slider-product-one">
+    <div class ="container">
+        <div class = "slider-product-one-content">
+            <div class = "slider-product-one-content-title">
+                <h2>Săn sale mỗi ngày </h2>
+            </div>
+            <div class = "slider-product-one-content-container">
+            <div class="slider-product-one-content-items-content">
+                <div class="slider-product-one-content-items">
+                    <div class="slider-product-one-content-item">
+                        <img src="image/bangaming.jpg" alt="">
+                        <div class="slider-product-one-content-item-text">
+                            <li><img src="image/logo3.png" alt = ""><p>Trợ giá siêu ngon</p></li>
+                            <li>Bàn Gaming</li>
+                            <li>(1m2x60x75)</li>
+                            <li><a href="">599.999<sup>đ</sup></a><span></span></li>
+                            <li>450.000<sup>đ</sup></li>
+                            <li><sup></sup></li>
+                            <li>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </li>
+                        </div>
+                    </div>
+                    <div class="slider-product-one-content-item">
+                        <img src="image/tunhabep.jpg" alt="">
+                        <div class="slider-product-one-content-item-text">
+                            <li><img src="image/logo3.png" alt = ""><p>Trợ giá siêu ngon</p></li>
+                            <li>Tủ Nhà Bếp</li>
+                            <li>(1m6x40x1m1)</li>
+                            <li><a href="">1.699.000<sup>đ</sup></a><span></span></li>
+                            <li>1.200.000<sup>đ</sup></li>
+                            <li><sup></sup></li>
+                            <li>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </li>
+                        </div>
+                    </div>
+                    <div class="slider-product-one-content-item">
+                        <img src="image/tuquanao.jpg" alt="">
+                        <div class="slider-product-one-content-item-text">
+                            <li><img src="image/logo3.png" alt = ""><p>Trợ giá siêu ngon</p></li>
+                            <li>Tủ Quần Áo</li>
+                            <li>(2mx50x1m3)</li>
+                            <li><a href="">2.500.000<sup>đ</sup></a><span></span></li>
+                            <li>2.300.000<sup>đ</sup></li>
+                            <li><sup></sup></li>
+                            <li>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </li>
+                        </div>
+                    </div>
+                    <div class="slider-product-one-content-item">
+                        <img src="image/kechuuoc.jpg" alt="">
+                        <div class="slider-product-one-content-item-text">
+                            <li><img src="image/logo3.png" alt = ""><p>Trợ giá siêu ngon</p></li>
+                            <li>Kệ Sách Chữ U</li>
+                            <li>(1m4x70x24)</li>
+                            <li><a href="">700.000<sup>đ</sup></a><span></span></li>
+                            <li>350.000<sup>đ</sup></li>
+                            <li></li><sup></sup></li>
+                            <li>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </li>
+                        </div>
+                    </div>
+                    <div class="slider-product-one-content-item">
+                        <img src="image/ketoongden.jpg" alt="">
+                        <div class="slider-product-one-content-item-text">
+                            <li><img src="image/logo3.png" alt = ""><p>Trợ giá siêu ngon</p></li>
+                            <li>Kệ Tổ Ong</li>
+                            <li>(1m2x24x30)</li>
+                            <li><a href="">300.000<sup>đ</sup></a><span></span></li>
+                            <li>99.989<sup>đ</sup></li>
+                            <li><sup></sup></li>
+                            <li>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                
+                            </li>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-product-one-content-items">
+                    <div class="slider-product-one-content-item">
+                        <img src="image/kesach3t.jpg" alt="">
+                        <div class="slider-product-one-content-item-text">
+                            <li><img src="image/logo3.png" alt = ""><p>Trợ giá siêu ngon</p></li>
+                            <li>Kệ Sách 3T</li>
+                            <li>(1mx90x24)</li>
+                            <li><a href="">500.000<sup>đ</sup></a><span></span></li>
+                            <li>200.000<sup>đ</sup></li>
+                            <li><sup></sup></li>
+                            <li>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            
+                            </li>
+                        </div>
+                    </div>
+                    <div class="slider-product-one-content-item">
+                        <img src="image/banlamviectrang.png" alt="">
+                        <div class="slider-product-one-content-item-text">
+                            <li><img src="image/logo3.png" alt = ""><p>Trợ giá siêu ngon</p></li>
+                            <li>Bàn Làm Việc Basic</li>
+                            <li>(1m2x75x60)</li>
+                            <li><a href="">799.000<sup>đ</sup></a><span></span></li>
+                            <li>300.000<sup>đ</sup></li>
+                            <li><sup></sup></li>
+                            <li>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </li>
+                        </div>
+                    </div>
+                    <div class="slider-product-one-content-item">
+                        <img src="image/kexuongrong.jpg" alt="">
+                        <div class="slider-product-one-content-item-text">
+                            <li><img src="image/logo3.png" alt = ""><p>Trợ giá siêu ngon</p></li>
+                            <li>Kệ Xương Rồng</li>
+                            <li>(1m2x70x20)</li>
+                            <li><a href="">200.000<sup>đ</sup></a><span></span></li>
+                            <li>70.000<sup>đ</sup></li>
+                            <li><sup></sup></li>
+                            <li>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+            
+                            </li>
+                        </div>
+                    </div>
+                    <div class="slider-product-one-content-item">
+                        <img src="image/kechuuvg.jpg" alt="">
+                        <div class="slider-product-one-content-item-text">
+                            <li><img src="image/logo3.png" alt = ""><p>Trợ giá siêu ngon</p></li>
+                            <li>Kệ Sách Ltinh</li>
+                            <li>(1m4x70x24)</li>
+                            <li><a href="">500.000<sup>đ</sup></a><span></span></li>
+                            <li>499.000<sup>đ</sup></li>
+                            <li></li><sup></sup></li>
+                            <li>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </li>
+                        </div>
+                    </div>
+                    <div class="slider-product-one-content-item">
+                        <img src="image/hopvai.jpg" alt="">
+                        <div class="slider-product-one-content-item-text">
+                            <li><img src="image/logo3.png" alt = ""><p>Trợ giá siêu ngon</p></li>
+                            <li>Hộp Vải </li>
+                            <li>(30x30x30)</li>
+                            <li><a href="">20.000<sup>đ</sup></a><span></span></li>
+                            <li>15.000<sup>đ</sup></li>
+                            <li><sup></sup></li>
+                            <li>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </li>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-product-one-content-items">
+                    <div class="slider-product-one-content-item">
+                        <img src="image/bantrabet.jpg" alt="">
+                        <div class="slider-product-one-content-item-text">
+                            <li><img src="image/logo3.png" alt = ""><p>Trợ giá siêu ngon</p></li>
+                            <li>Bàn Trà Bệt</li>
+                            <li>(40x80x40)</li>
+                            <li><a href="">400.000<sup>đ</sup></a><span>-50%</span></li>
+                            <li>200.000<sup>đ</sup></li>
+                            <li><sup></sup></li>
+                            <li>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </li>
+                        </div>
+                    </div>
+                    <div class="slider-product-one-content-item">
+                        <img src="image/bantrangdiem.png" alt="">
+                        <div class="slider-product-one-content-item-text">
+                            <li><img src="image/logo3.png" alt = ""><p>Trợ giá siêu ngon</p></li>
+                            <li>Bàn Trang Điểm Bệt</li>
+                            <li>(40x80x35)</li>
+                            <li><a href="">300.000<sup>đ</sup></a><span></span></li>
+                            <li>250.000<sup>đ</sup></li>
+                            <li><sup></sup></li>
+                            <li>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </li>
+                        </div>
+                    </div>
+                    <div class="slider-product-one-content-item">
+                        <img src="image/ghego.png" alt="">
+                        <div class="slider-product-one-content-item-text">
+                            <li><img src="image/logo3.png" alt = ""><p>Trợ giá siêu ngon</p></li>
+                            <li>Ghế Gỗ</li>
+                            <li>(70x50x50)</li>
+                            <li><a href="">1.000.000<sup>đ</sup></a><span></span></li>
+                            <li>50.000<sup>đ</sup></li>
+                            <li><sup></sup></li>
+                            <li>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </li>
+                        </div>
+                    </div>
+                    <div class="slider-product-one-content-item">
+                        <img src="image/tabdaugiuong.png" alt="">
+                        <div class="slider-product-one-content-item-text">
+                            <li><img src="image/logo3.png" alt = ""><p>Trợ giá siêu ngon</p></li>
+                            <li>Tab Đầu Giường </li>
+                            <li>(40x40x30)</li>
+                            <li><a href="">150.000<sup>đ</sup></a><span></span></li>
+                            <li>100.000<sup>đ</sup></li>
+                            <li><sup></sup></li>
+                            <li>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                
+                            </li>
+                        </div>
+                    </div>
+                    <div class="slider-product-one-content-item">
+                        <img src="image/kebancong.jpg" alt="">
+                        <div class="slider-product-one-content-item-text">
+                            <li><img src="image/logo3.png" alt = ""><p>Trợ giá siêu ngon</p></li>
+                            <li>Kệ Ban Công</li>
+                            <li>(1mx40x40)</li>
+                            <li><a href="">350.000<sup>đ</sup></a><span></span></li>
+                            <li>200.000<sup>đ</sup></li>
+                            <li><sup></sup></li>
+                            <li>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <div class="slider-product-one-content-btn">
+                    <i class="fa-solid fa-chevron-left fa-chevron-left-two "></i>
+                    <i class="fa-solid fa-chevron-right fa-chevron-right-two"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!---------------------------------------------productttttttttttt----------------->
+<section class="product-gallery-one">
+    <div class="container">
+        <div class = "product-gallery-one-content">
+            <div class = "product-gallery-one-content-title">
+                <h2>Sản Phẩm Nội Thất Rudy</h2>
+                <ul>
+                    <li><a href = "">Kệ Sách</a></li>
+                    <li><a href = "">Tủ </a></li>
+                    <li><a href = "">Bàn Ghế </a></li>
+                    <li><a href = "">Tất Cả </a></li>
+
+
+                </ul>
+            </div>
+            <div class = " product-gallery-one-content-product">
+                <div class = " product-gallery-one-content-product-item">
+                    <img src="image/tabdaugiuongoc.jpg" alt="">
+                    <div class="product-gallery-one-content-product-item-text">
+                        <li><p>Tab Đầu Giường OC</p></li>
+                        <li>Chất Liệu: Gỗ MDF</li>
+                        <li>Kích Thước: 40x45x30</li>
+                        <li>Giá: 250.000<sup>đ</sup></li>
+                        <li>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </li>
+                    </div>
+                </div>
+                <div class = " product-gallery-one-content-product-item">
+                    <img src="image/xuongrongcon.jpg" alt="">
+                    <div class="product-gallery-one-content-product-item-text">
+                        <li><p>Kệ Xương Rồng Con</p></li>
+                        <li>Chất Liệu: Gỗ MDF</li>
+                        <li>Kích Thước: 30x40x24</li>
+                        <li>Giá: 35.000<sup>đ</sup></li>
+                        <li>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </li>
+                    </div>
+                </div>
+                <div class = " product-gallery-one-content-product-item">
+                    <img src="image/tugiay.jpg" alt="">
+                    <div class="product-gallery-one-content-product-item-text">
+                        <li><p>Tủ Giày Đa Năng</p></li>
+                        <li>Chất Liệu: Gỗ MDF</li>
+                        <li>Kích Thước: 75x1mx30</li>
+                        <li>Giá: 650.000<sup>đ</sup></li>
+                        <li>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </li>
+                    </div>
+                </div>
+                <div class = " product-gallery-one-content-product-item">
+                    <img src="image/minicocon.jpg" alt="">
+                    <div class="product-gallery-one-content-product-item-text">
+                        <li><p>Kệ Sách MINI</p></li>
+                        <li>Chất Liệu: Gỗ MDF</li>
+                        <li>Kích Thước: 30x30x30</li>
+                        <li>Giá: 50.000<sup>đ</sup></li>
+                        <li>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </li>
+                    </div>
+                </div>
+                <div class = " product-gallery-one-content-product-item">
+                    <img src="image/tugiay4tang.jpg" alt="">
+                    <div class="product-gallery-one-content-product-item-text">
+                        <li><p>Tủ Giày 4 Tầng</p></li>
+                        <li>Chất Liệu: Gỗ MDF</li>
+                        <li>Kích Thước: 90x30x80</li>
+                        <li>Giá: 399.000<sup>đ</sup></li>
+                        <li>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </li>
+                    </div>
+                </div>
+                <div class = " product-gallery-one-content-product-item">
+                    <img src="image/bantrangdiemguong.jpg" alt="">
+                    <div class="product-gallery-one-content-product-item-text">
+                        <li><p>Bàn Trang Điểm Gương</p></li>
+                        <li>Chất Liệu: Gỗ MDF</li>
+                        <li>Kích Thước: 60x40x35</li>
+                        <li>Giá: 159.000<sup>đ</sup></li>
+                        <li>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </li>
+                    </div>
+                </div>
+                <div class = " product-gallery-one-content-product-item">
+                    <img src="image/kemaytinh.jpg" alt="">
+                    <div class="product-gallery-one-content-product-item-text">
+                        <li><p>Kệ Màn Hình</p></li>
+                        <li>Chất Liệu: Gỗ MDF</li>
+                        <li>Kích Thước: 60x15x20</li>
+                        <li>Giá: 30.000<sup>đ</sup></li>
+                        <li>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </li>
+                    </div>
+                </div>
+                <div class = " product-gallery-one-content-product-item">
+                    <img src="image/kenhieutang.jpg" alt="">
+                    <div class="product-gallery-one-content-product-item-text">
+                        <li><p>Tủ Nhiều Tầng</p></li>
+                        <li>Chất Liệu: Gỗ MDF</li>
+                        <li>Kích Thước: 90x30x1m</li>
+                        <li>Giá: 30.000<sup>đ</sup></li>
+                        <li>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+
+                        </li>
+                    </div>
+                </div>
+                <div class = " product-gallery-one-content-product-item">
+                    <img src="image/kedecord.jpg" alt="">
+                    <div class="product-gallery-one-content-product-item-text">
+                        <li><p>Kệ Decord</p></li>
+                        <li>Chất Liệu: Gỗ MDF</li>
+                        <li>Kích Thước: 40x40x20</li>
+                        <li>Giá: 49.000<sup>đ</sup></li>
+                        <li>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+
+                        </li>
+                    </div>
+                </div>
+                <div class = " product-gallery-one-content-product-item">
+                    <img src="image/tugiaydanang.jpg" alt="">
+                    <div class="product-gallery-one-content-product-item-text">
+                        <li><p>Tủ Giày Đa Năng</p></li>
+                        <li>Chất Liệu: Gỗ MDF</li>
+                        <li>Kích Thước: 1mx45x30</li>
+                        <li>Giá: 300.000<sup>đ</sup></li>
+                        <li>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+
+                        </li>
+                    </div>
+                </div>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!---hiện Thông tin sản phẩm ---------------------------------------------------------------------------------------------------------->
+<div id="product-detail">
+    <button id="close-btn">Đóng</button>
+    <img id="detail-img" src="" alt="">
+    <h2 id="detail-name"></h2>
+    <p id="detail-description"></p>
+    <button id ="add-to-cart-btn" >Thêm vào giỏ hàng </button>
+</div> 
+<!--------Bảo hành ------------------------------------------------------------------------------------------------------------------>
+<div id = "baohanh-ctn" class = "hidden">
+    <div class="baohanh-content">
+        <span class ="close-button" id = "close-button">Đóng</span>
+        <h2>Chính Sách Bảo Hành</h2>
+        <ul>
+            <li>Lỗi Đổi Trả : Chúng tôi sẽ một đổi một sản phẩm cho các bạn nếu nhận hàng không ưng ý , hoặc sản phẩm không giống trên quảng cáo , sản phẩm bị hỏng hóc do quá trình vận chuyển hoặc lỗi do nhà sản xuất </li>
+            <li>Hỗ Trợ Lắp Đặt: Chúng tôi sẽ hướng dẫn bạn hoàn thiện sản phẩm của chúng tôi qua video hướng dẫn , nếu nhận hàng không có video thì hãy liên lạc ngay với chúng tôi để nhận video hướng dẫn nhé </li>
+            <li>Giao Hàng : Hỗ trợ giao hàng hỏa tốc Khu vực Hà Nội và Lắp đặt trực tiếp nếu cần .</li>
+            <li>------- Cảm Ơn bạn đã tin tưởng shop -----</li>
+        </ul>
+    </div>
+</div>
+<div class="social-icons">
+ 
+        <div class="end">
+            <h1>Rudy Furniture</h1>
+            <div class="icon">
+            <a href="https://www.facebook.com/er.clyb" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.messenger.com/t/25359721883626274" target="_blank"><i class="fa-brands fa-facebook-messenger"></i></a>
+            <a href="https://github.com/rodrygoduy" target="_blank"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+
+</div>
+<div id="productList" class="container"></div>
+    
+<script src= "script.js " ></script>
+</body>
+</html>
